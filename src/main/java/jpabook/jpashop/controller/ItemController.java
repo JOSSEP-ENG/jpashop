@@ -1,4 +1,4 @@
-package jpabook.jpashop.web;
+package jpabook.jpashop.controller;
 
 import jpabook.jpashop.domain.item.Book;
 import jpabook.jpashop.domain.item.Item;
@@ -58,11 +58,11 @@ public class ItemController {
         BookForm form = new BookForm();
 
         form.setId(item.getId());
-        form.setName(form.getName());
-        form.setPrice(form.getPrice());
-        form.setStockQuantity(form.getStockQuantity());
-        form.setAuthor(form.getAuthor());
-        form.setIsbn(form.getIsbn());
+        form.setName(item.getName());
+        form.setPrice(item.getPrice());
+        form.setStockQuantity(item.getStockQuantity());
+        form.setAuthor(item.getAuthor());
+        form.setIsbn(item.getIsbn());
 
         model.addAttribute("form", form);
         return "items/updateItemForm";
